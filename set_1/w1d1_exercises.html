@@ -4,12 +4,27 @@
 
 
 // 2) Wrap the statement in a function called whoAmI and call that function
+var myName = "Chris";
+var myAge = 29;
+var currentAge = new Date().getFullYear();
 
+
+var yearOfBirth = function(age){
+  return currentAge - age;
+};
 var callName = function(){
-    console.log("Hi, my name is Chris and I'm 29");
+    console.log("Hi, my name is "+ myName + " and I'm " + myAge);
+    console.log("I was born in " + yearOfBirth(myAge));
 
 }
 
 callName();
+
+// 3) Change the hard coded string into a parameters, name and age
+
+// 4) Create a variable named yearOfBirth and calculate the year based on age (ex 2016 - age). Then add another console.log statement that outputs I was born in [insert yearOfBirth].
+
+// 5) Move the year of birth calculation into a new function.
+
 
 </script>
