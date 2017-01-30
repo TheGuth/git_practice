@@ -153,6 +153,29 @@ var charCode = function(letter){
 
     // ////////////////////////////
 
+    function RockPaperScissors(){
+      var userChoice = prompt("Enter 0 for Rock, 1 for Paper, 2 for Scissors;");
+      var computer = Math.floor((Math.random()*3));
+      var choices = ["Rock", "Paper", "Scissors"];
+      var computerChoice = choices[computer];
+      var choice = choices[userChoice];
+      var statement = "You picked " + choice + " and the computer picked "+ computerChoice + ".";
+
+      if (choice === computerChoice) {
+        statement += " Its a Tie!";
+      } else if (choice === "Rock" && computerChoice === "Scissors") {
+        statement += " You Win!";
+      } else if (choice === "Scissors" && computerChoice === "Paper") {
+        statement += " You Win!";
+      } else if (choice === "Paper" && computerChoice === "Rock") {
+        statement += " You Win!";
+      } else {
+        statement += " Too, bad! Computer won.";
+      }
+      console.log(statement)
+    }
+
+    RockPaperScissors();
 
 
 
