@@ -5,15 +5,25 @@
 
 // 2) Wrap the statement in a function called whoAmI and call that function
 var myName = "Chris";
-var myAge = 10;
+var myAge = 29;
 var currentDate = new Date().getFullYear();
-
+var e
 
 var yearOfBirth = function(age){
   return currentDate - age;
 };
 
+var validate = function(name, age){
+  if ( typeof(name) === "string" && typeof(age) === "number"){
+
+  } else {
+    throw "exception";
+  }
+}
+
 var callName = function(){
+  validate(myName, myAge);
+
   if (yearOfBirth(myAge) > currentDate){
     throw "error"
   } else {
@@ -24,9 +34,9 @@ var callName = function(){
 
 try {
    callName();
-}
+} 
 catch (e) { // non-standard
-  console.log("Hi, I'm from the future!");
+  console.log("Arguments not valid");
 }
 
 
@@ -40,6 +50,7 @@ catch (e) { // non-standard
 
 // 6) What happens if you enter a negative age? Add a try/catch
 
+// 7) Check if name and age have been entered. Create a conditional which outputs console.error("Arguments not valid").
 
 
 </script>
