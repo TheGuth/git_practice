@@ -5,26 +5,41 @@
 
 // 2) Wrap the statement in a function called whoAmI and call that function
 var myName = "Chris";
-var myAge = 29;
-var currentAge = new Date().getFullYear();
+var myAge = 10;
+var currentDate = new Date().getFullYear();
 
 
 var yearOfBirth = function(age){
-  return currentAge - age;
+  return currentDate - age;
 };
+
 var callName = function(){
+  if (yearOfBirth(myAge) > currentDate){
+    throw "error"
+  } else {
     console.log("Hi, my name is "+ myName + " and I'm " + myAge);
     console.log("I was born in " + yearOfBirth(myAge));
-
+  }
 }
 
-callName();
+try {
+   callName();
+}
+catch (e) { // non-standard
+  console.log("Hi, I'm from the future!");
+}
+
+
+
 
 // 3) Change the hard coded string into a parameters, name and age
 
 // 4) Create a variable named yearOfBirth and calculate the year based on age (ex 2016 - age). Then add another console.log statement that outputs I was born in [insert yearOfBirth].
 
 // 5) Move the year of birth calculation into a new function.
+
+// 6) What happens if you enter a negative age? Add a try/catch
+
 
 
 </script>
