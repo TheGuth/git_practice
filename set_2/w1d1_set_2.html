@@ -30,6 +30,10 @@ Write a function called decode which takes an encoded word as an argument, and r
 Use your function to decode the following message: 'craft block argon meter bells brown croon droop'.
 -->
 
+<!-- How many days in a month -->
+
+<!-- Write a function that takes the name of a month as an argument and use a switch statement to determine how many days are there in that month. For example if the parameter to the function is January, the function should display "January has 31 days". -->
+
 
 <script type="text/javascript">
 
@@ -59,14 +63,12 @@ Use your function to decode the following message: 'craft block argon meter bell
 var charCode = function(letter){
     switch (letter) {
   case "a" :
-    console.log(" A ");    
     return 2;
     break;
   case "b":
     return 3;
      break;
-  case "c" :
-    console.log(" C ");       
+  case "c" :     
     return 4;
     break;
   case "d":
@@ -78,8 +80,7 @@ var charCode = function(letter){
     }  
   }
     
-    
-    
+
     var crackCode = function (encoded){
         var words = encoded.split(" ");
         var results = "";
@@ -98,6 +99,77 @@ var charCode = function(letter){
     }
     
     crackCode('craft block argon meter bells brown croon droop');
+
+  // ////////////////////////////
+
+    function howManyDays(month) {
+      switch (month) {
+        case "January":
+          console.log("January has 31 days");
+          break;
+        case "February":
+          console.log("February has 28.25 days");
+          break;
+        case "March":
+          console.log("March has 31 days");
+          break;
+        case "April":
+          console.log("April has 30 days");
+          break;
+        case "May":
+          console.log("May has 31 days");
+          break;
+        case "June":
+          console.log("June has 30 days");
+          break;
+        case "July":
+          console.log("July has 31 days");
+          break;
+        case "August":
+          console.log("August has 31 days");
+          break;
+        case "September":
+          console.log("September has 30 days");
+          break;
+        case "October":
+          console.log("October has 31 days");
+          break;
+        case "November":
+          console.log("November has 30 days");
+          break;
+        case "December":
+          console.log("December has 31 days");
+          break;
+        default:
+          console.log("that isn't a Month!");
+      }
+    }
+
+    howManyDays("January");
+    howManyDays("February");
+    howManyDays("November");
+    howManyDays("July");
+    howManyDays("hello");
+
+    // ////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
 </script>
